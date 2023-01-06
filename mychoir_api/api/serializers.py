@@ -1,34 +1,33 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from 
+from .models import *
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class ChantSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ['url', 'username', 'email', 'groups']
+        model = Chant
+        fields = '__all__'
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
+class ChoristeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Group
-        fields = ['url', 'name']
+        model = Choriste
+        fields = '__all__'
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
+class AttendanceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Group
-        fields = ['url', 'name']
+        model = Attendance
+        fields = '__all__'
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
+class EventSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Group
-        fields = ['url', 'name']
+        model = Event
+        fields = '__all__'
+class Temps_liturgiqueSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Temps_liturgique
+        fields = '__all__'
+class Partie_eurcharistiqueSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Partie_eucharistique
+        fields = '__all__'
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ['url', 'name']
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ['url', 'name']
