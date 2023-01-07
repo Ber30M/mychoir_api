@@ -26,7 +26,7 @@ class Temps_liturgiqueSerializer(serializers.ModelSerializer):
     class Meta:
         model = Temps_liturgique
         fields = '__all__'
-class Partie_eurcharistiqueSerializer(serializers.ModelSerializer):
+class Partie_eucharistiqueSerializer(serializers.ModelSerializer):
     class Meta:
         model = Partie_eucharistique
         fields = '__all__'
