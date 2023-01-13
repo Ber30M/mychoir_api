@@ -5,9 +5,10 @@ class Chant(models.Model):
     titre = models.CharField(max_length=50)
     auteur = models.CharField(max_length=50)
     Key = models.CharField(max_length=12)
-    paroles = models.TextField(max_length=50)
+    paroles = models.TextField(max_length=3000)
     Partie_eucharistique = models.CharField(max_length=50)
     temps_liturgique = models.CharField(max_length=50)
+    published_on = models.DateField(auto_now_add=True)
     
     def __str__(self):
         return f"{self.titre} de {self.auteur}"
