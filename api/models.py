@@ -4,10 +4,10 @@ class Chant(models.Model):
     id = models.AutoField(primary_key=True)
     titre = models.CharField(max_length=50)
     auteur = models.CharField(max_length=50)
-    Key = models.CharField(max_length=12)
+    key = models.CharField(max_length=12)
     paroles = models.TextField(max_length=3000)
-    Partie_eucharistique = models.CharField(max_length=50)
-    temps_liturgique = models.CharField(max_length=50)
+    partie_eucharistique = models.CharField(max_length=50)
+    temps_liturgique = models.CharField(max_length=50 , null=True)
     published_on = models.DateField(auto_now_add=True)
     
     def __str__(self):
